@@ -7,7 +7,7 @@ pipeline {
                 script {
                     echo "Building.."
                     sh "python --version"
-                    def python_pth = "${env.WORKSPACE}/hello.py"
+                    def python_pth = "hello.py"
                     sh "python " + python_pth
                 }
             }
