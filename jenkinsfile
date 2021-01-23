@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage("Build") {
             steps {
-                echo 'Building..'
-                def python_pth = ${env.WORKSPACE} + '/' + 'hello.py'
-                sh 'python ' + python_pth
+                echo "Building.."
+                def python_pth = ${env.WORKSPACE} + "/" + "hello.py"
+                sh "python " + python_pth
             }
         }
     }
