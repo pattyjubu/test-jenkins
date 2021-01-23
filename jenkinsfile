@@ -4,10 +4,12 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                echo "Building.."
-                sh "python --version"
-                def python_pth = ${env.WORKSPACE} + "/" + "hello.py"
-                sh "python " + ${python_pth}
+                script {
+                    echo "Building.."
+                    sh "python --version"
+                    def python_pth = ${env.WORKSPACE} + "/" + "hello.py"
+                    sh "python " + ${python_pth}
+                }
             }
         }
     }
