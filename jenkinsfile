@@ -4,10 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-			{env.BUILD_ID}
                 echo 'Building..'
-				def python_pth = ${env.WORKSPACE} + '/' + 'hello.py'
-				sh 'python ' + python_pth
+                def python_pth = ${env.WORKSPACE} + '/' + 'hello.py'
+                sh 'python ' + python_pth
             }
         }
     }
